@@ -1,6 +1,5 @@
 # 210CT - Coursework Repository
 ### By William Read
-<img src="https://scontent-lhr3-1.xx.fbcdn.net/t31.0-8/10469465_768122243245459_895801624913332900_o.png" width="200" height="200" style="text-align:center;">
 
 ## Summary
 This repository is a collection of all my 210CT coursework submission pieces. Each folder represnts the level of the task that was accomplished and the programming language used, whilst each file starts with a number based off of the question that was attempted.
