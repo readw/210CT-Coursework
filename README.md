@@ -17,19 +17,17 @@ Below I have stated what each weeks tasks is based off (normally based off the t
 - **Week 0**: The Basics
 - **Week 1**: Algorithms and Data Sturctures
 - **Week 2**: Pseudocode and BigO Notation
-- **Week 3**: TBD
-- **Week 4**: TBD
-- **Week 5**: TBD
-- **Week 6**: TBD
-- **Week 7**: TBD
-- **Week 8**: TBD
-- **Week 9**: TBD
-- **Week 10**: TBD
-- **Week 11**: TBD
+- **Week 3**: Recursion and String Algorithms
+- **Week 4**: Searching and Sorting
+- **Week 5**: Data Structures with focus on Linked Lists
+- **Week 6**: Trees (Binary Trees)
+- **Week 7**: Basic Graph Algorithms
+- **Week 8**: Advanced Graph Algorithms
+- **Week 9**: Hashing
 
-For my portfolio/CV please visit my Website as well as for more details on personal projects and ALL projects in which I have worked on over the course of being at Coventry University.
+For my portfolio/CV please visit my Website as well as for more details on any of my personal projects and A.L.L. projects in which I have worked on over the course of being at Coventry University.
 
 <br />
-Email: readw@uni.coventry.ac.uk
+<b>Email<b>: readw@uni.coventry.ac.uk
 
-Webiste: www.williamread.weebly.com
+<b>Webiste<b>: www.williamread.weebly.com
