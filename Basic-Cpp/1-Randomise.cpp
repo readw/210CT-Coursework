@@ -1,9 +1,9 @@
-/* #include <iostream>
+#include <iostream>
 #include <cstdlib>
 #include <vector>
 using namespace std;
 
-vector<int> Randomiser(vector<int> &data) {
+vector<int> Randomise(vector<int> &data) {
     int i = 0;
     int length = data.size();
     int randomI = 0;
@@ -36,4 +36,4 @@ int main() {
     }
     cout << endl;
     return 0;
-} */
+}
