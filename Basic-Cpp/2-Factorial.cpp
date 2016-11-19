@@ -1,6 +1,5 @@
 /*
-Count the number of trailing 0s (number of 0s at the end of the number) in a
-factorial number.
+Week 1 - 2) Count the number of trailing 0s in a factorial number
 
 Example: Input: 5, Output: 1; Input: 10, Output: 2.
 */
@@ -11,6 +10,7 @@ Example: Input: 5, Output: 1; Input: 10, Output: 2.
 using namespace std;
 
 int Factorial(int number){
+    /* Function determines the number of trailing zeros within a passed integer. */
     int zeros = 0;
     
     for (int i = 1; i != number; i++){
