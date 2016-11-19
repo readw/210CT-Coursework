@@ -30,7 +30,7 @@ int main() {
         data.insert(data.begin()+i,number);
     }
     
-    vector<int> randomResult = Randomiser(data);
+    vector<int> randomResult = Randomise(data);
     for (int i = 0; i < randomResult.size(); i++){
         cout << randomResult[i] << " ";
     }
