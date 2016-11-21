@@ -54,7 +54,6 @@ based off of the '''
 class Traversal:
     def __init__(self, graph):
         self.graph = graph
-        self.graphLength = len(graph)
 
     # Breadth First Search Function
     def BFS(self, start):
