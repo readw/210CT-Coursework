@@ -54,12 +54,52 @@ based off of the '''
 class Traversal:
     def __init__(self, graph):
         self.graph = graph
+        self.graphLength = len(graph)
 
-    def BFS(graph):
-        return 0
+    # Breadth First Search Function
+    def BFS(self, start):
+        '''Function to perform a breadth first traversal from a given root.'''
+        # Assign traversal order and queue with start value in array.
+        traversalOrder, queue = [start], [start]
 
-    def DFS(graph):
-        return 0
+        # While the queue contains a value.
+        while queue:
+            # Pop the first value on the queue and store at current.
+            current = queue.pop()
+            # For all the assigned neighbours to the key 'current'
+            for neighbour in self.graph[current]:
+                # Check to see if the item hasn't been added to the traversal
+                # yet, then append the value to both the traversal order,
+                # and the queue.
+                if neighbour not in traversalOrder:
+                    traversalOrder.append(neighbour)
+                    queue.append(neighbour)
+
+        # Returns the result of the breadth first.
+        return traversalOrder
+
+    # Iterative Depth First Search Function
+    def DFS(self, start):
+        '''Function to perform a depth first traversal from a given root.'''
+        # Assign an empty array to traversalOrder and assign an array to stack
+        # with the root node (starting value).
+        traversalOrder, stack = [], [start]
+
+        # Whilst there is a value in the stack
+        while stack:
+            # Set current to item at the top of the stack.
+            current = stack.pop()
+            # If the current node isn't in the traversalOrder array.
+            if current not in traversalOrder:
+                # Append this to the traversalOrder.
+                traversalOrder.append(current)
+                # And for all assigned nodes to the key 'current'
+                for node in self.graph[current]:
+                    # Append the node to the end of the stack.
+                    stack.append(node)
+
+        # Returns the result of the Depth First Search.
+        return traversalOrder
 
 if __name__ == "__main__":
     '''
@@ -69,7 +109,7 @@ if __name__ == "__main__":
 
     A -- B -- C -- G -- I
     |  / |         |
-    | /  |    J    |         K
+    | /  |    J    |
     |    |    |    |
     D    E -- F    H
     '''
@@ -84,12 +124,6 @@ if __name__ == "__main__":
     graph.addNode("H")
     graph.addNode("I")
     graph.addNode("J")
-    
-    # Tests adding junk node
-    graph.addNode("K")
-    
-    # Tests repeating Node
-    graph.addNode("B")
 
     graph.addEdge("A","B")
     graph.addEdge("A","D")
@@ -102,15 +136,10 @@ if __name__ == "__main__":
     graph.addEdge("G","H")
     graph.addEdge("G","I")
 
-    # Tests Duplication of edge
-    graph.addEdge("B","C")
-
-    # Tests Non-Existant values
-    graph.addEdge("1","2")
-
     # Displays final Unweighted Adjacency List
     resultGraph = graph.generateGraph()
-    print(resultGraph)
 
     #Traversal Calls
     traversal = Traversal(resultGraph)
+    print(traversal.BFS('A'))
+    print(traversal.DFS('A'))
