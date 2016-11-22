@@ -15,17 +15,17 @@ RECURSIVE_PRIME(N, M)
 '''
 
 def RecursivePrime(Number, Minus):
-    '''Determines if a passed number is in reverse order.'''
+    '''Determines if a passed number is in reverse order.'''         # Example: n=3
     # If N is 1 or 2 then it is a Prime Number.
-    if Minus == 1 or Minus == 0:
-        return True
+    if Minus == 1 or Minus == 0:                                     # O(1) --> O(1)
+        return True                                                  # O(1) --> O(1)
     # Checks if there isn't a remainder between N and M.
     # Therefore it isn't a prime.
-    if Number % Minus == 0:
-        return False
-    else:
+    if Number % Minus == 0:                                          # O(1) --> O(1)
+        return False                                                 # O(1) --> O(1)
+    else:                                                            # O(1) --> O(1)
         # If neither match re-call function and take one from M.
-        return RecursivePrime(Number, Minus-1)
+        return RecursivePrime(Number, Minus-1)                       # O(n) --> O(3)
 
 if __name__ == "__main__":
     while True:

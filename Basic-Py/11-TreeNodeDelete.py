@@ -31,32 +31,32 @@ class List(object):
 Added remove function.
     '''
     def remove(self, node):
-        '''Remove an item from a linked list data structure.'''
+        '''Remove an item from a linked list data structure.'''               # Example: n=3
         # Sets the delete pointer to the first node
-        deletePointer = self.head
+        deletePointer = self.head                                             # O(1) --> O(1)
 
         # Until the node is equal to the deletePointer.value
-        while node != deletePointer.value:
+        while node != deletePointer.value:                                    # O(n) --> O(3)
             # Set the delete pointer to the next value
-            deletePointer = deletePointer.next
+            deletePointer = deletePointer.next                                # O(n) --> O(3)
 
         # If the previous pointer is equal to none.
-        if deletePointer.prev != None:
+        if deletePointer.prev != None:                                        # O(1) --> O(1)
             # Sets the previous deletePointer's next pointer to the next
             # pointer value.
-            deletePointer.prev.next = deletePointer.next
-        else:
+            deletePointer.prev.next = deletePointer.next                      # O(1) --> O(1)
+        else:                                                                 # O(1) --> O(1)
             # Gets head value of the tree, and set to the next pointer.
-            self.head = deletePointer.next
+            self.head = deletePointer.next                                    # O(1) --> O(1)
 
         # If the next value is none.
-        if deletePointer.next != None:
+        if deletePointer.next != None:                                        # O(1) --> O(1)
             # Set the next previous deletePointer, to the previous
             # deletePointer.
-            deletePointer.next.prev = deletePointer.prev
-        else:
+            deletePointer.next.prev = deletePointer.prev                      # O(1) --> O(1)
+        else:                                                                 # O(1) --> O(1)
             # Set the tail of the deletePointer, previous.
-            self.tail = deletePointer.prev
+            self.tail = deletePointer.prev                                    # O(1) --> O(1)
     
     def display(self):
         values=[]

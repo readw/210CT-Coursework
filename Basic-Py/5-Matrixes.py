@@ -31,50 +31,50 @@ MULTI_MATRIX(B, C)
 '''
 
 def addMatrix(matrixOne, matrixTwo):
-    '''Takes two Matrix and adds them together to get a result.'''
-    resultMatrix = []
+    '''Takes two Matrix and adds them together to get a result.'''                      # Example: n=3
+    resultMatrix = []                                                                   # O(1)   --> O(1)
     # Check length of the first Matrix
-    for x in range(len(matrixOne)):
-        resultMatrix.append([])
+    for x in range(len(matrixOne)):                                                     # O(n)   --> O(3)
+        resultMatrix.append([])                                                         # O(n)   --> O(3)
         # Check height of the second Matrix
-        for y in range(len(matrixTwo[0])):
+        for y in range(len(matrixTwo[0])):                                              # O(n^2) --> O(9)
             # Add the values at the same positions together to get result.
-            resultMatrix[x].append(int(matrixOne[x][y]) + int(matrixTwo[x][y]))
+            resultMatrix[x].append(int(matrixOne[x][y]) + int(matrixTwo[x][y]))         # O(n^2) --> O(9)
             
     # Return Added Matrix Result
-    return resultMatrix
+    return resultMatrix                                                                 # O(1)   --> O(1)
 
 def subMatrix(matrixOne, matrixTwo):
-    '''Takes two Matrix and subtracts them from each other.'''
-    resultMatrix = []
+    '''Takes two Matrix and subtracts them from each other.'''                          # Example: n=2
+    resultMatrix = []                                                                   # O(1)   --> O(1)
     # Check length of the first Matrix
-    for x in range(len(matrixOne)):
-        resultMatrix.append([])
+    for x in range(len(matrixOne)):                                                     # O(n)   --> O(2)
+        resultMatrix.append([])                                                         # O(n)   --> O(2)
         # Check height of the second Matrix
-        for y in range(len(matrixOne[0])):
+        for y in range(len(matrixOne[0])):                                              # O(n^2) --> O(4)
             # Subtract the values at the same positions from each other to get result.
-            resultMatrix[x].append(int(matrixOne[x][y]) - int(matrixTwo[x][y]))
+            resultMatrix[x].append(int(matrixOne[x][y]) - int(matrixTwo[x][y]))         # O(n^2) --> O(4)
 
     # Return Subtracted Matrix.
-    return resultMatrix
+    return resultMatrix                                                                 # O(1)   --> O(1)
 
 def multiMatrix(matrixOne, matrixTwo):
-    '''Takes two Matrix values and multiplys them together.'''
-    resultMatrix = []
+    '''Takes two Matrix values and multiplys them together.'''                          # Example: n=2
+    resultMatrix = []                                                                   # O(1)   --> O(1)
     # Check length of the first Matrix
-    for x in range(len(matrixOne)):
-        resultMatrix.append([])
+    for x in range(len(matrixOne)):                                                     # O(n)   --> O(2)
+        resultMatrix.append([])                                                         # O(n)   --> O(2)
         # Check height of the second Matrix
-        for y in range(len(matrixTwo[0])):
-            resultMatrix[x].append(0)
+        for y in range(len(matrixTwo[0])):                                              # O(n^2) --> O(4)
+            resultMatrix[x].append(0)                                                   # O(n^2) --> O(4)
             # Check the length of MatrixTwo.
-            for k in range(len(matrixTwo)):
+            for k in range(len(matrixTwo)):                                             # O(n^3) --> O(8)
                 # Multiply all the values in row of matrixOne and column of matrixTwo
                 # together.
-                resultMatrix[x][y] += int(matrixOne[x][k])*int(matrixTwo[k][y])
+                resultMatrix[x][y] += int(matrixOne[x][k])*int(matrixTwo[k][y])         # O(n^3) --> O(8)
 
     # Returns Multiplyed Matrix.
-    return resultMatrix
+    return resultMatrix                                                                 # O(1)   --> O(1)
 
 def equationMatrix(B, C):
     '''Calculates the equation A=B*C-2*(B+C)'''

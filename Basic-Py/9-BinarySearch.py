@@ -24,32 +24,32 @@ BINARY_SEARCH(L, low, high)
 
 def BinarySearch(L, low, high):
     '''Perform a binary search on a collection of data to check if the search
-range is within a particular list.'''
+range is within a particular list.'''                                                    # Example: n=3
     # Set minimum pointer as 1.
-    minimum = 1
+    minimum = 1                                                                          # O(1) --> O(1)
     # Set maximum pointer as the length of the list.
-    maximum = len(L)
+    maximum = len(L)                                                                     # O(1) --> O(1)
 
-    while minimum + (maximum - minimum) > 0:
+    while minimum + (maximum - minimum) > 0:                                             # O(n) --> O(3)
 
         # Set the middle value in the remaining list.
-        middle = minimum + (maximum-minimum)//2
+        middle = minimum + (maximum-minimum)//2                                          # O(n) --> O(3)
         # If between the range, then search was a success.
-        if low < L[middle] < high:
-            return True
+        if low < L[middle] < high:                                                       # O(n) --> O(3)
+            return True                                                                  # O(n) --> O(3)
 
         # If the value is higher than the highest point of the range, set the
         # minimum to the top half of the list.
-        if L[middle] > high:
-            minimum = middle+1
+        if L[middle] > high:                                                             # O(n) --> O(3)
+            minimum = middle+1                                                           # O(n) --> O(3)
 
         # If the value is lower then the lowest range, set the maximum point
         # to the lower half of the list.
-        if L[middle] < low:
-            maximum = middle-1
+        if L[middle] < low:                                                              # O(n) --> O(3)
+            maximum = middle-1                                                           # O(n) --> O(3)
 
     # If no value is found returns false.
-    return False
+    return False                                                                         # O(1) --> O(1)
 
 if __name__ == "__main__":
     while True:

@@ -29,36 +29,36 @@ REVERSE_ORDER(s, length)
 #######################
 def reverseOrderIter(string):
     '''Iterative Solution that reverses the order of all seperate words within
-a passed string.'''
+a passed string.'''                                                                  # Example: n=3
     # Set reversed string as an empty string.
-    reversedString = ""
+    reversedString = ""                                                              # O(1) --> O(1)
 
     # Loop through the list in reverse order.
-    for i in range(len(string)-1,-1,-1):
+    for i in range(len(string)-1,-1,-1):                                             # O(n) --> O(3)
         # If it isn't the last value in the array.
-        if i != 0:
+        if i != 0:                                                                   # O(n) --> O(3)
             # Append reversedString with the value and a space.
-            reversedString += string[i]+" "
+            reversedString += string[i]+" "                                          # O(n) --> O(3)
         # If it is the last value in the array.
-        else:
+        else:                                                                        # O(n) --> O(3)
             # Appened reversed String with the word.
-            reversedString += string[i]
+            reversedString += string[i]                                              # O(n) --> O(3)
             
-    return reversedString
+    return reversedString                                                            # O(1) --> O(1)
 
 #######################
 ## Recursive Version ##
 #######################
 def reverseOrderRec(sentence, length):
     '''Recursive Solution that reverses the order of all seperate words within
-a passed string.'''
+a passed string.'''                                                                 # Example: n=3
     # If the length of the string array is 0.
-    if length == 0:
+    if length == 0:                                                                 # O(1) --> O(1)
         # Return back the selected value.
-        return sentence[0]
-    else:
+        return sentence[0]                                                          # O(1) --> O(1)
+    else:                                                                           # O(1) --> O(1)
         # Call the function passing the array back and taking 1 from the length.
-        return reverseOrderRec(sentence[0-length:], length-1)+" "+sentence[0]
+        return reverseOrderRec(sentence[0-length:], length-1)+" "+sentence[0]       # O(n) --> O(3)
 
 if __name__ == "__main__":
     while True:

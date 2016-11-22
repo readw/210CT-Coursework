@@ -47,35 +47,35 @@ def in_order(tree):
 ########################
 def in_order(tree):
     '''Sorts a Binary Tree Structure so that it is designed in to be in
-accending order.'''
+accending order.'''                                                       # Example: n=2
     # Assigns an empty array as a stack.
-    stack = []
+    stack = []                                                            # O(1) --> O(1)
 
-    while True:
+    while True:                                                           # O(n) --> O(2)
 
-        if tree != None:
+        if tree != None:                                                  # O(n) --> O(2)
             # Append the value of the tree to the stack.
-            stack.append(tree)
+            stack.append(tree)                                            # O(n) --> O(2)
 
             # Set the value of the tree to the left node.
-            tree = tree.left
-        else:
-            if tree == None and len(stack) > 0:
+            tree = tree.left                                              # O(n) --> O(2)
+        else:                                                             # O(n) --> O(2)
+            if tree == None and len(stack) > 0:                           # O(n) --> O(2)
                 # Set the tree to the popped item.
-                tree = stack.pop()
+                tree = stack.pop()                                        # O(n) --> O(2)
 
                 # Print the current value of the tree.
-                print(tree.value)
+                print(tree.value)                                         # O(n) --> O(2)
 
                 # Set the tree to the right node.
-                tree = tree.right
+                tree = tree.right                                         # O(n) --> O(2)
 
                 # Return to the start of the loop.
-                continue
+                continue                                                  # O(n) --> O(2)
             
-            if tree == None and len(stack) == 0:
+            if tree == None and len(stack) == 0:                          # O(n) --> O(2)
                 # Break out of the loop as sort is complete.
-                break
+                break                                                     # O(n) --> O(2)
 
 def tree_sort(array):
     tree = None
