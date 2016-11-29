@@ -47,7 +47,7 @@ Added remove function.
             deletePointer.prev.next = deletePointer.next                      # O(1) --> O(1)
         else:                                                                 # O(1) --> O(1)
             # Gets head value of the tree, and set to the next pointer.
-            self.head = deletePointer.next                                    # O(1) --> O(1)
+            self.head = deletePointer.next                                    # O(1) --> O(1)
 
         # If the next value is none.
         if deletePointer.next != None:                                        # O(1) --> O(1)
@@ -74,5 +74,5 @@ if __name__ == '__main__':
     l.insert(l.tail,Node(10))
     l.insert(l.tail,Node(13))
     l.display()
-    l.remove(6)
+    l.remove(10)
     l.display()

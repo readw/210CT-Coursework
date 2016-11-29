@@ -62,18 +62,18 @@ class Traversal:
         traversalOrder, queue = [start], [start]
 
         # While the queue contains a value.
-        while queue:
+        while queue and (len(traversalOrder) != len(self.graph)):
             # Pop the first value on the queue and store at current.
             current = queue.pop()
+            if current not in traversalOrder:
+                traversalOrder.append(current)
+                
             # For all the assigned neighbours to the key 'current'
             for neighbour in self.graph[current]:
                 # Check to see if the item hasn't been added to the traversal
                 # yet, then append the value to both the traversal order,
                 # and the queue.
-                if neighbour not in traversalOrder:
-                    traversalOrder.append(neighbour)
-                    queue.append(neighbour)
-
+                queue.insert(0,neighbour)
         # Returns the result of the breadth first.
         return traversalOrder
 

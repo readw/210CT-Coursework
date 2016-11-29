@@ -47,15 +47,14 @@ end over a weighted graph.'''
     while current != end:
         # Define neighbours
         neighbours = graph[current]
-        for edge, length in neighbours.items():
+        for edge in neighbours:
             # If distance less than what is currently set.
-            if tentativeWeights[current]+length < tentativeWeights[edge]:
+            if tentativeWeights[current]+neighbours[edge] < tentativeWeights[edge]:
                 # Assign edge to the smaller distance.
-                tentativeWeights[edge] = tentativeWeights[current]+length
+                tentativeWeights[edge] = tentativeWeights[current]+neighbours[edge]
                 previous[edge] = current
         # Append current value to the visited path array.
         visited.append(current)
-
         # Set minimum value to infinity.
         minimum = float("inf")
         for node in graph:
@@ -70,11 +69,13 @@ end over a weighted graph.'''
     visited.append(end)
     
     # Generate a path from collected data.
-    path = shortestPath(graph, previous, end)
+    print(previous)
+    print(tentativeWeights)
+    path = shortestPath(previous, end)
     # Return formatted output
-    return "Distance: "+str(tentativeWeights[end])+"\nPath: "+str(path[::-1])
+    return "Distance: "+str(tentativeWeights[end])+"\nPath: "+str(path)
     
-def shortestPath(graph, previous, end):
+def shortestPath(previous, end):
     # Create array to store the result.
     result = []
     # Until it reaches parent node.
@@ -85,7 +86,7 @@ def shortestPath(graph, previous, end):
         end = previous[end]
     # Append the parent to the reuslt and return the shortest path.
     result.append(end)
-    return result
+    return result[::-1]
 
 if __name__ == "__main__":
     '''
