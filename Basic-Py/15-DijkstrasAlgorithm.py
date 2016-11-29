@@ -69,8 +69,6 @@ end over a weighted graph.'''
     visited.append(end)
     
     # Generate a path from collected data.
-    print(previous)
-    print(tentativeWeights)
     path = shortestPath(previous, end)
     # Return formatted output
     return "Distance: "+str(tentativeWeights[end])+"\nPath: "+str(path)
