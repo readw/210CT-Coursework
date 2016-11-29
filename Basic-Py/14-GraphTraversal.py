@@ -140,5 +140,5 @@ if __name__ == "__main__":
 
     #Traversal Calls
     traversal = Traversal(resultGraph)
-    print(traversal.BFS('A'))
-    print(traversal.DFS('A'))
+    print(traversal.BFS('C'))
+    print(traversal.DFS('C'))
