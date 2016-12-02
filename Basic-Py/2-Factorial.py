@@ -5,14 +5,14 @@ def Factorial(N):
 
     # Sets noZeros as 0
     noZeros = 0
-
+    factorial = 1
     # Loops in for all the values in range between 1 and the number entered.
     for i in range(1, N):
 
         # Increments the noZeros by the integer of the number entered divided
         # by 5 to the power.
         noZeros += int(N//(5**i))
-
+        
     return noZeros
 
 if __name__ == "__main__":

@@ -65,7 +65,7 @@ accending order.'''                                                       # Exam
                 tree = stack.pop()                                        # O(n) --> O(2)
 
                 # Print the current value of the tree.
-                print(tree.value)                                         # O(n) --> O(2)
+                print(tree.value)# O(n) --> O(2)
 
                 # Set the tree to the right node.
                 tree = tree.right                                         # O(n) --> O(2)

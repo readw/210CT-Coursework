@@ -137,6 +137,7 @@ if __name__ == "__main__":
 
     # Displays final Unweighted Adjacency List
     resultGraph = graph.generateGraph()
+    print(resultGraph)
 
     #Traversal Calls
     traversal = Traversal(resultGraph)
