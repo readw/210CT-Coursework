@@ -76,17 +76,26 @@ def multiMatrix(matrixOne, matrixTwo):
     # Returns Multiplyed Matrix.
     return resultMatrix                                                                 # O(1)   --> O(1)
 
+def multiMatrix_INT(integer, matrix):
+    resultMatrix = []
+    for x in range(len(matrix)):
+        resultMatrix.append([])
+        for y in range(len(matrix)):
+            resultMatrix[x].append(int(matrix[x][y])*integer)
+            
+    return resultMatrix
+
 def equationMatrix(B, C):
     '''Calculates the equation A=B*C-2*(B+C)'''
     # Part 1 = B+C
     result1 = addMatrix(B, C)
-
+    
     # Part 2 = B*C
     result2 = multiMatrix(B, C)
-
+    
     # Part 3 = 2*Part 1
-    result3 = addMatrix(result1, result1)
-
+    result3 = multiMatrix_INT(2, result1)
+    
     # Answer = Part 2 - Part 3
     answer = subMatrix(result2, result3)
 
