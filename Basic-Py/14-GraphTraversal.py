@@ -140,5 +140,9 @@ if __name__ == "__main__":
 
     #Traversal Calls
     traversal = Traversal(resultGraph)
+    file = open('results.txt', 'w')
     print(traversal.BFS('C'))
     print(traversal.DFS('C'))
+    file.write(str(traversal.BFS('C'))+'\n')
+    file.write(str(traversal.DFS('C'))+'\n')
+    file.close()
